@@ -14,6 +14,9 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Image Viewer"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         let fm = FileManager.default
         let path = Bundle.main.resourcePath!
         let items = try! fm.contentsOfDirectory(atPath: path)
@@ -23,7 +26,6 @@ class ViewController: UITableViewController {
                 pictures.append(item)
             }
         }
-        print(pictures)
     }
     
     // How many rows expected to be in tableView
