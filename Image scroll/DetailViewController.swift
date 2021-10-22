@@ -12,6 +12,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var selectedImage: String?
+    var imageNumber = 0
+    var totalImageNumber = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +22,7 @@ class DetailViewController: UIViewController {
             imageView.image = UIImage(named: image)
         }
         
-        title = selectedImage
+        title = "Image \(imageNumber) of \(totalImageNumber)"
         navigationItem.largeTitleDisplayMode = .never
     }
     

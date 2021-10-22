@@ -26,6 +26,7 @@ class ViewController: UITableViewController {
                 pictures.append(item)
             }
         }
+        pictures = pictures.sorted()
     }
     
     // How many rows expected to be in tableView
@@ -43,6 +44,8 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
             vc.selectedImage = pictures[indexPath.row]
+            vc.imageNumber = indexPath.row + 1
+            vc.totalImageNumber = pictures.count
             navigationController?.pushViewController(vc, animated: true)
         }
     }
