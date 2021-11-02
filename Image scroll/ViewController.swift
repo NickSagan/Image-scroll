@@ -7,8 +7,7 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
-    
+class ViewController: UICollectionViewController {
     var pictures = [String]()
     
     override func viewDidLoad() {
@@ -26,29 +25,26 @@ class ViewController: UITableViewController {
                 pictures.append(item)
             }
         }
-        pictures = pictures.sorted()
+        pictures = pictures.sorted() ?? [""]
+        collectionView.reloadData()
     }
     
-    // How many rows expected to be in tableView
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         pictures.count
     }
     
-    // For each row asks to return a cell
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
-        cell.textLabel?.text = pictures[indexPath.row]
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Picture", for: indexPath) as! PictureCell
+        cell.imageView.image = UIImage(named: pictures[indexPath.item])
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
-            vc.selectedImage = pictures[indexPath.row]
-            vc.imageNumber = indexPath.row + 1
+            vc.selectedImage = pictures[indexPath.item]
+            vc.imageNumber = indexPath.item + 1
             vc.totalImageNumber = pictures.count
             navigationController?.pushViewController(vc, animated: true)
         }
     }
-    
 }
-

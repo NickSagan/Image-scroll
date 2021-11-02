@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		910A84662731573D00AC75A0 /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910A84652731573D00AC75A0 /* PictureCell.swift */; };
 		91A484AB2721A6B90054386A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A484AA2721A6B90054386A /* AppDelegate.swift */; };
 		91A484AD2721A6B90054386A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A484AC2721A6B90054386A /* SceneDelegate.swift */; };
 		91A484AF2721A6B90054386A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A484AE2721A6B90054386A /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		910A84652731573D00AC75A0 /* PictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
 		91A484A72721A6B90054386A /* Image scroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image scroll.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A484AA2721A6B90054386A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91A484AC2721A6B90054386A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				91A484AC2721A6B90054386A /* SceneDelegate.swift */,
 				91A484AE2721A6B90054386A /* ViewController.swift */,
 				91A484D32721B0440054386A /* DetailViewController.swift */,
+				910A84652731573D00AC75A0 /* PictureCell.swift */,
 				91A484B02721A6B90054386A /* Main.storyboard */,
 				91A484B32721A6BE0054386A /* Assets.xcassets */,
 				91A484B52721A6BE0054386A /* LaunchScreen.storyboard */,
@@ -190,6 +193,7 @@
 			files = (
 				91A484AF2721A6B90054386A /* ViewController.swift in Sources */,
 				91A484AB2721A6B90054386A /* AppDelegate.swift in Sources */,
+				910A84662731573D00AC75A0 /* PictureCell.swift in Sources */,
 				91A484AD2721A6B90054386A /* SceneDelegate.swift in Sources */,
 				91A484D42721B0440054386A /* DetailViewController.swift in Sources */,
 			);
